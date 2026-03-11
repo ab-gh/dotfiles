@@ -2,7 +2,7 @@
 #!/bin/bash
 set -euo pipefail
 brew bundle --file=/dev/stdin <<EOF
-{{- .chezmoi.sourceDir }}/Brewfile{{/*
+{{- .chezmoi.sourceDir }}/dot_Brewfile{{/*
 */ -}}
 {{- include "Brewfile" | indent 0 }}{{/*
 */ -}}
