@@ -1,1 +1,59 @@
-eval "$(oh-my-posh init zsh)"
+# -----------------------------
+# History
+# -----------------------------
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+
+# -----------------------------
+# Completion
+# -----------------------------
+autoload -U compinit
+compinit
+
+zstyle ':completion:*' menu select
+
+# -----------------------------
+# Homebrew environment
+# -----------------------------
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# -----------------------------
+# Plugins (installed with brew)
+# -----------------------------
+
+# Autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# History substring search
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Syntax highlighting (must be near end)
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# -----------------------------
+# Oh My Posh prompt
+# -----------------------------
+eval "$(oh-my-posh init zsh --config 'pure')"
+
+# -----------------------------
+# Useful aliases
+# -----------------------------
+alias ll="ls -lah"
+alias gs="git status"
+alias gc="git commit"
+alias gp="git push"
+
+# -----------------------------
+# Optional: faster directory nav
+# -----------------------------
+setopt AUTO_CD
