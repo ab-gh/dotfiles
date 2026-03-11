@@ -1,0 +1,15 @@
+[user]
+	name = ash
+	email = git@ash.pm
+[github]
+	user = ab-gh
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[push]
+	# change to maching for machines with older versions of git 1.x.x
+	default = simple
+	autoSetupRemote = true
+
+
