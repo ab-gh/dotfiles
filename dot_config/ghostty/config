@@ -8,3 +8,6 @@ quick-terminal-screen = main
 # Optional: no titlebar for cleaner dropdown
 window-decoration = none
 font-family="Maple Mono NF Medium"
+theme = Cobalt Next Dark
+background-opacity = 0.5
+background-blur = true
