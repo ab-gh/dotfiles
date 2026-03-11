@@ -1,0 +1,10 @@
+# Toggle dropdown terminal
+keybind = global:cmd+escape=toggle_quick_terminal
+
+# Appearance
+quick-terminal-animation-duration = 0.15
+quick-terminal-screen = main
+
+# Optional: no titlebar for cleaner dropdown
+window-decoration = none
+font-family="Maple Mono NF Medium"

@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+defaults write com.apple.Dock autohide -bool true
+defaults write com.apple.Dock autohide-delay -float 0  # Instant show
+defaults write com.apple.Dock autohide-time-modifier -float 0  # No animation delay
+
+# Restart Dock to apply
+killall Dock
+
+# Other common settings (add more here)
+defaults write com.apple.finder AppleShowAllFiles true  # Show hidden files
+killall Finder
