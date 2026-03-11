@@ -1,11 +1,5 @@
-{{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 set -euo pipefail
-brew bundle --file=/dev/stdin <<EOF
-{{- .chezmoi.sourceDir }}/dot_Brewfile{{/*
-*/ -}}
-{{- include "dot_Brewfile" | indent 0 }}{{/*
-*/ -}}
-EOF
-{{ end -}}
+# Trigger on Brewfile changes: {{ include "dot_Brewfile" | sha256sum }}
+brew bundle --file={{ .chezmoi.homeDir }}/.Brewfile
 
