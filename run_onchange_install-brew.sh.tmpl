@@ -1,0 +1,11 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+set -euo pipefail
+brew bundle --file=/dev/stdin <<EOF
+{{- .chezmoi.sourceDir }}/Brewfile{{/*
+*/ -}}
+{{- include "Brewfile" | indent 0 }}{{/*
+*/ -}}
+EOF
+{{ end -}}
+
