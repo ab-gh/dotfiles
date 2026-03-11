@@ -1,0 +1,7 @@
+brew "chezmoi"
+brew "uv"
+cask "1password"
+cask "arc"
+cask "ghostty"
+cask "raycast"
+cask "telegram"
