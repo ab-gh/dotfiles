@@ -1,9 +1,5 @@
 # dotfiles
-## requirements
 
-- oh-my-zsh
-- [conda completion](https://github.com/esc/conda-zsh-completion) in `.oh-my-zsh/custom/plugins/`
+Using Chezmoi as a dotfile handler, oh-my-posh as prompt, and brew bundle as package manager
 
-## install
-- omz
-- conda (`base`, `py39`)
+
